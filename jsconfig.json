@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+        "@includes/*": ["_includes/*"],
+        "@layouts/*": ["_layouts/*"],
+        "@posts/*": ["_posts/*"],
+        "@utils/*": ["utils/*"],
+        "@hooks/*": ["hooks/*"],
+        "@context": ["context/index"],
+      }
+    },
+    "exclude": ["node_modules", "dist"]
+}

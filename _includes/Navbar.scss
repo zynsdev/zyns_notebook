@@ -1,0 +1,104 @@
+.NavBar{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    transition: all .3s;    
+    &::after{
+        content: "";
+        width: 0%;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: rgb(131,58,180);
+        background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+        transition: .5s;
+    }
+    
+    &.sticky{
+        background-color: #ffffff;
+        height: 70px;
+        padding: 0 20px;        
+        &::after{
+            width: 100%;
+        }        
+    }
+    .Toggle{
+        display: none;
+    }
+    .Logo{        
+        flex-grow: 1;
+        font-size: 1.2em;
+        height: 60%;
+    }   
+    .Menu{
+        display: flex;
+        gap: 20px;
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                &:hover span::before, &.active span::before{
+                    width: 25px;
+                    height: 25px;
+                }
+                &:hover, &:hover span{
+                    color: #ff642b;
+                }
+                span{
+                    text-transform: uppercase;
+                    color: #833ab4;
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: .3s;
+                    &::before{
+                        content: "";   
+                        width: 0;
+                        height: 0;       
+                        border-radius: 50%;                                  
+                        position: absolute;
+                        background-color: pink;
+                        z-index: -1;
+                        transition: .3s;
+                    }                    
+                }
+            }
+        }
+    }
+}   
+
+@media (max-width: 950px){
+    .NavBar{
+        .Menu{
+            position: fixed;
+            left: -100%;
+            top: 0;
+            width: 100vw;   
+            height: 100vh;
+            background-color: #fff;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            transition: .5s;
+            z-index: 6000;
+            &.show{
+                left: 0;
+            }
+        }
+        .Toggle{
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: #fd1d1d;
+            z-index: 9000;
+        }
+    }
+}

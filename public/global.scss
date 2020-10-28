@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+html{
+    font-size: 13pt;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body{
+    font-family: 'Livvic', sans-serif;
+    letter-spacing: 1px;
+    scroll-behavior: smooth;
+    line-height: 1.5em;
+}
+img{
+    max-height: 100%;
+}

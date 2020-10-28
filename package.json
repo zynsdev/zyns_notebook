@@ -1,0 +1,29 @@
+{
+  "name": "zyns_notebook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "next": "^9.5.5",
+    "node-sass": "^4.14.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-icons": "^3.11.0"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.2",
+    "highlight.js": "^10.3.1",
+    "markdown-it": "^12.0.2",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-emoji": "^2.0.0",
+    "markdown-it-sub": "^1.0.0",
+    "markdown-it-sup": "^1.0.0",
+    "raw-loader": "^4.0.2"
+  }
+}
