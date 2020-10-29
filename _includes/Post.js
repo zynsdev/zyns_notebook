@@ -11,9 +11,13 @@ export default function Post(props) {
         tags,
         slug
     } = props
-    return (
+
+    return (        
         <div className={s.Post}>
-            <img className={s.Image} src={imageUrl} alt={title}/>                
+            <Link href={`/post/${slug}`}>
+                <img className={s.Image} src={imageUrl} alt={title}/>
+            </Link>
+            
             
             <div className={s.Content}>
                 <div className={s.Tags}>
@@ -21,14 +25,16 @@ export default function Post(props) {
                     tags.map(tag => <Tag key={tag} tag={tag} />)
                 }
                 </div>
+                <Link href={`/post/${slug}`}>
+                    <a className={s.Title}>{title}</a>
+                </Link>
                 
-                <div className={s.Title}>{title}</div>
                 <div className={s.Des}>{description}</div>
                 <Link href={`/post/${slug}`}>
                     <a className={s.ReadMore}>Read more →</a>
                 </Link>
             </div>
-        </div>
+        </div>                
     )
 }
 

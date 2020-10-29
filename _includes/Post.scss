@@ -1,12 +1,19 @@
 .Post{
     display: flex;
     margin-bottom: 50px;
-    box-shadow: 0 0px 2px 0 #0000001a, 0 1px 1px 0 #0000000f;
+    box-shadow: 0 1px 3px 0 #0000001a, 0 0px 1px 0 #0000000f;
+    text-decoration: none;
+    transition: .3s;
+    &:hover{
+        box-shadow: 0 0 40px -20px #0000009d;
+    }
     .Image{
        width: 40%;
        height: 200px;
        object-fit: cover;
        //border-radius: 6px;
+       object-position: center;
+       cursor: pointer;
     }
     .Content{
         width: 60%;
@@ -20,6 +27,9 @@
             font-size: 1.6em;
             margin-bottom: 10px;
             color: #f55110;
+            line-height: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
         }
         .Des{
             flex-grow: 1;
@@ -27,6 +37,8 @@
             color: grey;
         }
         .ReadMore{
+            cursor: pointer;
+            width: max-content;
             text-decoration: none;
             color: #f56410;
             transition: .4s;
@@ -57,5 +69,22 @@
     }
     &::before{
         content: "#";
+    }
+}
+@media(max-width: 800px){
+    .Post{
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+        flex-direction: column;
+        .Image{
+            width: 100%;
+        }
+        .Content{
+            width: 100%;
+            padding: 10px;
+            .Des{
+                margin-bottom: 50px;
+            }
+        }
     }
 }
