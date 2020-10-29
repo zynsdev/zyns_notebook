@@ -15,15 +15,15 @@ export default function Home() {
         <Layout head={head}>
             <div className={s.Wrapper}>
                 <div className={s.Content}>
-                    <div className={s.Name}>Zyns's Notebook</div>
+                    <h1 className={s.Name}>Zyns's Notebook</h1>
                     <div className={s.Des}>
                         Code never lie, Bug never die
                         <br />
                         Một chiếc nhật kí ghi lại hành trình theo đuổi ước mơ.
                     </div>
-                    <Link href="/about"><a>More about me →</a></Link>
+                    <Link href="/about"><a className={s.Button}>More about me →</a></Link>
                 </div>                
-            </div>
+            </div>            
         </Layout>
     ) 
 }

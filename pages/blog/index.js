@@ -1,3 +1,4 @@
+import Post from '@includes/Post'
 import Layout from '@layouts/Layout'
 import { getAllPost } from '@utils/postAPI'
 import React from 'react'
@@ -19,7 +20,9 @@ export default function Blog({posts}) {
                 Những thứ linh tinh mà hắn tưởng hắn biết rồi
             </div>
             <div className={s.ListPost}>
-
+            {
+                posts.map(post => <Post key={post.title} {...post} />)
+            }
             </div>
         </div>
         </Layout>

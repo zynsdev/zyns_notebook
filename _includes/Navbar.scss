@@ -8,6 +8,7 @@
     position: fixed;
     top: 0;
     transition: all .3s;    
+    z-index: 9000;
     &::after{
         content: "";
         width: 0%;
@@ -49,6 +50,7 @@
                 }
                 &:hover, &:hover span{
                     color: #ff642b;
+                    
                 }
                 span{
                     text-transform: uppercase;
