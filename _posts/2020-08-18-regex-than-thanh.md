@@ -1,9 +1,9 @@
 ---
 title: "Lần đầu học Regex"
-des: "Một đoạn kí tự viết lung tung, không hiểu gì cả."
-author: "trungluc"
-date: "18 tháng 8, 2020"
-imageUrl: "https://i.imgur.com/OOCxl67.jpg"
+description: "Một đoạn kí tự viết lung tung, chẳng hiểu gì cả"
+meta_keyword: "regex"
+meta_description: "Hướng dẫn sử dụng regex"
+imageUrl: "https://i.imgur.com/3UgqueU.jpg"
 tags: [regex, basic]
 ---
 
