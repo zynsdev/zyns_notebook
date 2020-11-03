@@ -9,6 +9,7 @@ export async function getAllPost(){
         const fileContent = await import(`../_posts/${key.slice(2)}`)
         const meta = matter(fileContent.default)
         posts.push({
+            date: key.slice(2, 12),
             slug: key.slice(2, -3),
             ...meta.data
         })
@@ -21,7 +22,8 @@ export async function getPostBySlug(slug){
     const meta = matter(fileContent.default)    
     return {
         ...meta.data,
-        content: md.render(meta.content)
+        content: md.render(meta.content),
+        date: slug.slice(0, 10)               
     }
 }
 

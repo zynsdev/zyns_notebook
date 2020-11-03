@@ -1,0 +1,40 @@
+.Wrapper{
+    max-width: 900px;
+    margin: 150px auto 50px auto;
+    .Title{
+        margin-bottom: 20px;
+        font-family: 'Space Mono', monospace;
+        font-size: 1.7rem;
+        &:hover::before{
+            color: #ff5511;
+        }
+        &::before{
+            content: "# ";
+            color: #ffaa65;
+            transition: .3s;
+        }
+    }
+}
+
+.Tag{
+    text-decoration: none;
+    margin: 5px 10px;
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: #5f5f5f;
+    transition: .3s;
+    &:hover{
+        color: #f53210;
+        transform: scale(1.1);
+    }
+    &:first-child{
+        margin-left: 0;
+    }
+    &:last-child{
+        margin-right: 0;
+    }
+    &::before{
+        content: "#";
+    }
+}

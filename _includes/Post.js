@@ -9,7 +9,7 @@ export default function Post(props) {
         date,
         imageUrl,
         tags,
-        slug
+        slug,
     } = props
 
     return (        
