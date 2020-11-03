@@ -1,4 +1,5 @@
 import Layout from '@layouts/Layout'
+import Head from 'next/head'
 import { getAllPost, getPostBySlug } from '@utils/postAPI'
 import React from 'react'
 import s from './[slug].scss'
@@ -11,17 +12,24 @@ export default function Post({post}) {
         title: post.title
     }
 
+
     return (
+        <>
+        <Head>
+            <link rel="stylesheet" href="/css/hljs.css" />
+        </Head>
         <Layout head={head}>
             <div className={s.Wrapper}>
                 <h1 className={s.Title}>{post.title}</h1>
-                <div 
+                {/* <div className={s.Des}> {post.date} </div> */}
+                <article
                     className={s.Content} 
                     dangerouslySetInnerHTML={{__html: post.content}} 
                 />
             </div>
             
         </Layout>
+        </>
     )
 }
 
