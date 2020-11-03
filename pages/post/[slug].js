@@ -9,7 +9,7 @@ export default function Post({post}) {
     const head = {
         meta_keywords: post.meta_keywords,
         meta_description: post.meta_description,
-        title: post.title
+        title: `${post.title} | Zyns's Notebook`
     }
 
 
